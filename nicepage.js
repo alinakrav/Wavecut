@@ -1,3 +1,48 @@
+// dragElement(document.getElementById("soundwave"));
+
+// function dragElement(elmnt) {
+//   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+//   elmnt.onmousedown = console.log('down');
+//   elmnt.onmousedown = dragMouseDown;
+
+//   function dragMouseDown(e) {
+//     console.log('dragmouse');
+//     e = e || window.event;
+//     e.preventDefault();
+//     // get the mouse cursor position at startup:
+//     pos3 = e.clientX;
+//     pos4 = e.clientY;
+//     console.log(e.clientX);
+//     document.onmouseup = console.log('up');
+//     document.onmouseup = closeDragElement;
+//     // call a function whenever the cursor moves:
+//     document.onmousemove = elementDrag;
+//   }
+
+//   function elementDrag(e) {
+//     console.log('elemdrag');
+//     e = e || window.event;
+//     e.preventDefault();
+//     // calculate the new cursor position:
+//     pos1 = pos3 - e.clientX;
+//     pos2 = pos4 - e.clientY;
+//     pos3 = e.clientX;
+//     pos4 = e.clientY;
+//     // set the element's new position:
+//     console.log(elmnt.offsetLeft + " - " + pos1);
+//     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+//     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+//   }
+
+//   function closeDragElement() {
+//     console.log('closedrag');
+//     // stop moving when mouse button is released:
+//     document.onmouseup = null;
+//     document.onmousemove = null;
+//   }
+// }
+
+
 let white = "rgba(255,255,255,1)";
 let clear = "rgba(0,0,0,0)";
 var cursorColor = clear;
