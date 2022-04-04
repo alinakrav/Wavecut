@@ -42,6 +42,46 @@
 //   }
 // }
 
+// function search(s) { 
+//     let url = 'https://api.spotify.com/v1/search?q=' + s +'&type=track&market=CA&limit=10&offset=0" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQDfmJ50azwyTKl5OY0TSX4jRRWi-tGWskcBPoQtsz7a_92c1b0u4AiCMXfCaRwNZBf8mO8tX1vvzfiUMkxiaECW-37TuGgrPszqb-us7saOv05ctwUXkisnZAis8qU_iOqkHHUWOC8zQ8p7srOhSmSylhHNsZR8CX6c4B8';
+//     let request = new XMLHttpRequest();
+//     request.open('GET', url);
+//     request.responseType = 'json';
+//     request.onload = function() {
+//         if (request.response.url.substring(request.response.url.length-3) == 'jpg')
+//             if (likes)
+//                 showResultsWithLikes(request.response, id);
+//             else
+//                 showResults(request.response, id);
+//         else {
+//             id0 = ('0' + id).slice(-2);
+//             document.getElementById('cont' + id0).remove();
+//         }
+//         return request.response;
+//     }
+//     request.send();
+// }
+
+var arcticmonkeys = new Audio('images/arcticmonkeys.mp3');
+var thehoosiers = new Audio('images/thehoosiers.mp3');
+var tameimpala = new Audio('images/tameimpala.mp3');
+var lastshadowpuppets = new Audio('images/lastshadowpuppets.mp3');
+
+var isPlaying = false;
+
+function toggle(name, sec) {
+    isPlaying ? pauseAll() : name.play();
+    name.currentTime = sec;
+    isPlaying = !isPlaying;
+};
+
+function pauseAll() {
+    [arcticmonkeys, thehoosiers, tameimpala, lastshadowpuppets].map(pause);
+}
+
+function pause(name) {
+    name.pause();
+}
 
 let white = "rgba(255,255,255,1)";
 let clear = "rgba(0,0,0,0)";
