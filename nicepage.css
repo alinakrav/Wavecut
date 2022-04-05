@@ -16194,6 +16194,11 @@ blockquote .small:before {
   top: 0;
   bottom: 0;
 }
+
+#addrec:hover > p {
+  color: #a3ede9 !important;
+}
+
 /* Prevent selection and tap highlights */
 .pswp__container,
 .pswp__img {
